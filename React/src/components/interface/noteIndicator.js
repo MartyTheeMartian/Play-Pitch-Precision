@@ -5,7 +5,14 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-
+    keyStrokeEvents: state.keyStrokeEvents,
+    vocalInputResults: state.vocalInputResults,
+    exerciseScores: state.exerciseScores,
+    greenTime: state.greenTime,
+    targetNote: state.targetNote,
+    targetNoteIndex: state.targetNoteIndex,
+    sungNote: state.sungNote,
+    recordingStatus: state.recordingStatus
   };
 };
 
@@ -24,7 +31,7 @@ class NoteIndicator extends Component {
 
     return (
       <div className="container">
-        <div sytle={style}>{this.props.note}</div>
+        <div style={style}>{this.props.note}</div>
       </div>
     );
   }
